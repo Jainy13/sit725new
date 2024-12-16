@@ -17,3 +17,9 @@ app.get("/addTwoNumber", (req,res)=>{
 app.listen(port,()=>{
 console.log("App listening to: "+port)
 })
+
+const express = require("express");
+const app = express();
+const catRouter = require("./routers/catRouter");
+
+app.use("/api/cat", catRouter);
